@@ -8,6 +8,8 @@ html,
 body {
   --black: hsl(240, 6%, 13%);
   --gray: hsl(240, 9%, 89%);
+  --bgColor: hsl(240, 5%, 7%);
+  --bgCardColor: hsl(240, 6%, 13%);
 
   height: 100vh;
   font-family: 'Roboto', sans-serif;
@@ -17,12 +19,15 @@ body {
 body {
   display: grid;
   place-items: center;
+  background: var(--bgColor);
 }
 
 main {
-  background: url(../images/backgroundm.svg);
-  width: 375px;
-  height: 812px;
+  background: url(../images/backgroundm.svg) no-repeat center/cover;
+  width: 100vw;
+  max-width: 428px;
+  height: 100vh;
+  max-height: 812px;
 }
 
 .container {
@@ -82,4 +87,55 @@ ul {
   display: flex;
   gap: 0.5rem;
   justify-content: center;
+}
+
+
+@media screen and (min-width: 429px) {
+  body {
+    background: var(--bgColor) url(../images/degradeDesktop.svg) no-repeat top;
+  }
+
+  main {
+    background: url(../images/mask.svg) no-repeat center var(--bgCardColor);
+    max-width: 358px;
+    max-height: 540px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  main::before {
+    content: '';
+    width: 4rem;
+    height: 9.8rem;
+    background: url(../images/faixa.svg);
+    position: absolute;
+    top: -137px;
+    z-index: 1;
+  }
+
+  main::after {
+    content: '';
+    width: 5rem;
+    height: 0.5rem;
+    background: var(--bgColor);
+    position: absolute;
+    top: 16px;
+  }
+
+  .avatar {
+    width: 10rem;
+    margin: 4.5rem auto 0;
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 1281px) {
+  body {
+    background: var(--bgColor) url(../images/degradeDesktop.svg) no-repeat top/cover;
+  }
+
+  main::before, main::after {
+    background: transparent;
+  }
 }
