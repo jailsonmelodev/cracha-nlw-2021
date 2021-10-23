@@ -130,7 +130,7 @@ ul {
   }
 }
 
-@media screen and (min-width: 1281px) {
+@media screen and (min-width: 1441px) {
   body {
     background: var(--bgColor) url(../images/degradeDesktop.svg) no-repeat top/cover;
   }
