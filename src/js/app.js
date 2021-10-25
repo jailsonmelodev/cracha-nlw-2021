@@ -3,7 +3,8 @@ const linksSocialMedia = {
   instagram: 'jailsonmelodev',
   youtube: 'jailsonmelodev',
   facebook: 'jailsonmelodev',
-  twitter: 'jailsonmelodev'
+  twitter: 'jailsonmelodev',
+  linkedin: 'in/jailsonmelodev'
 }
 
 const changeSocialMediaLinks = () => {
